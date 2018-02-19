@@ -211,7 +211,7 @@ class Start extends Component {
 		this.setState({ [key]: value})
 	}
 
-	showTaskDetail() {
+	showTaskDetail(e) {
 		this.setState({
 			isDetailShown: true,
 		})

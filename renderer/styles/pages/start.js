@@ -7,13 +7,17 @@ export default `
 	}
 
 	::-webkit-scrollbar {
-        display: none;
+    display: none;
+	}
+
+	:root {
+		--sidebar-width: 332px;
 	}
 
 	body {
 		margin:0;
 		padding:0;
-		padding-left:332px;
+		padding-left: var(--sidebar-width);
 		background:#FBFBFD;
 		color:#9B9B9B;
 	}
@@ -30,13 +34,16 @@ export default `
 	}
 
 	.sidebar {
-		width: 332px;
+		width: var(--sidebar-width);
 		height: 100vh;
 		position: fixed;
 		top: 0;
 		left: 0;
 		background: #FBFBFD;
 		box-shadow: inset 0 2px 40px 0 rgba(114,114,114,0.07);
+		resize: horizontal;
+		overflow: hidden;
+		min-width: 200px;
 	}
 
 

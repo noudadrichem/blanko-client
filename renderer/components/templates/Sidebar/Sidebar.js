@@ -2,16 +2,9 @@ import React, { Component } from 'react'
 import styles from './sidebarStyle'
 import ProjectList from '../../organisms/ProjectList'
 import AddProject from '../../molecules/AddProject'
+import ResizeTrigger from '../../atoms/ResizeTrigger'
 
 class SideBar extends Component {
-	constructor(props) {
-		super(props)
-
-		this.state = {
-			name: 'sidebar'
-		}
-	}
-
 	render() {
 		return (
 			<div className="sidebar">
@@ -35,6 +28,11 @@ class SideBar extends Component {
 					selectProject={this.props.selectProject}
 					setProjectFavorite={this.props.setProjectFavorite}
 					toggleModal={this.props.toggleModal}
+				/>
+
+				<ResizeTrigger
+					sideBarNode={this.sideBarNode}
+					triggerResize={this.triggerResize}
 				/>
 
 				<style jsx global>{ styles }</style>
